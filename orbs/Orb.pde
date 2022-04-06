@@ -26,7 +26,7 @@ class Orb {
     if (checkXBoundry()) {
       velocity.y*= -1;
     }
-    veliocity.mult(DAMPING);
+    velocity.mult(DAMPING);
     position.add(velocity);
     acceleration.mult(0);
   }//run
