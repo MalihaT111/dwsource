@@ -56,23 +56,23 @@ class ExpressionTree {
     return "";
   }
 
-  String preOrder(TreeNode current) {
+  String preOrder(ExpressionTreeNode current) {
     if (current != null) {
-      return current.data+ " " + preOrder(current.left) + preOrder(current.right);
+      return current.value+ " " + preOrder(current.left) + preOrder(current.right);
     }
     return "";
   }
 
-  String postOrder(TreeNode current) {
+  String postOrder(ExpressionTreeNode current) {
     if (current != null) {
-      return postOrder(current.left) + postOrder(current.right) + current.data + " ";
+      return postOrder(current.left) + postOrder(current.right) + current.value + " ";
     }
     return "";
   }
 
-  String inOrder(TreeNode current) {
+  String inOrder(ExpressionTreeNode current) {
     if (current != null) {
-      return inOrder(current.left) + current.data + " " +  inOrder(current.right);
+      return inOrder(current.left) + current.value + " " +  inOrder(current.right);
     }
     return "";
   }
